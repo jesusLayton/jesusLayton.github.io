@@ -14,8 +14,8 @@ li{
     list-style: none;
 }
 header{
-    height: 10vh;
-    background-color: brown;
+    height: 50vh;
+    background-color: lightblue;
 }
 main{
     height: 80vh;
@@ -28,6 +28,8 @@ figure, nav {
 }
 figure {
     margin: 1rem;
+    
+    
 }
 li {
     display: inline-block;
