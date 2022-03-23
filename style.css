@@ -21,7 +21,7 @@ header{
 }
 
 .header-sec{
-    background: rgb(32, 19, 102);
+    background: rgb(178, 169, 226);
     display: flex;
    
    
@@ -33,7 +33,7 @@ header{
 }
 header section{
     width: 100%;
-    background: rgb(101, 101, 223);
+    background: rgb(137, 137, 223);
     
 
 }
@@ -82,26 +82,26 @@ aside, section {
 
 aside {
     width: 30vw;
-    background-color: chocolate;
+    background-color: rgb(241, 202, 175);
 }
 aside div{
     height: 15vh;
     margin: 3vh;
-    background: rebeccapurple;
+    background: rgb(154, 126, 182);
 }
 .main-section{
     
     
     width: 90vw;
     padding: 1rem;
-    background: indianred;
+    background: rgb(235, 159, 159);
 }
 .footer-sociales, .footer-info{
     display: inline-block;
     margin: 1rem;
 }
 footer{
-    background: greenyellow;
+    background: rgb(194, 230, 141);
 }
 .footer-info {
     position: absolute;
