@@ -16,10 +16,20 @@ li{
 header{
     display: flex;
     flex-direction: column;
-    background-color: lightblue;
+    
+    
 }
+
 .header-sec{
     background: rgb(32, 19, 102);
+    display: flex;
+   
+   
+
+}
+.sec-span{
+    margin: 10px;
+
 }
 header section{
     width: 100%;
@@ -47,6 +57,9 @@ footer{
 
 figure {
     margin: 1rem;
+    justify-content: right;
+    display:flex;
+    justify-content: center;
     
     
 }
@@ -58,10 +71,7 @@ nav{
     position: absolute;
     right: 10.5rem;
 }
-/*aside, section {
-    display: inline-block;
-    height: 80vh;
-}*/
+
 
 aside, section {
     display: flex;
@@ -69,7 +79,6 @@ aside, section {
     justify-content: stretch;
 
 }
-
 
 aside {
     width: 30vw;
@@ -80,7 +89,7 @@ aside div{
     margin: 3vh;
     background: rebeccapurple;
 }
-section{
+.main-section{
     
     
     width: 90vw;
@@ -97,15 +106,4 @@ footer{
 .footer-info {
     position: absolute;
     right: 1.5rem;
-}
-.section-body{
-    display: block;
-    background: red;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
-    margin: 1rem;
-    border: 0.5rem solid black;
 }
