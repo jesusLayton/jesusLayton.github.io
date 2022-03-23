@@ -18,7 +18,12 @@ header{
     background-color: lightblue;
 }
 main{
-    height: 80vh;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+
+
 }
 footer{
     height: 10vh;
@@ -39,12 +44,21 @@ nav{
     position: absolute;
     right: 10.5rem;
 }
-aside, section {
+/*aside, section {
     display: inline-block;
     height: 80vh;
+}*/
+
+aside, section {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+
 }
+
+
 aside {
-    width: 20vw;
+    width: 30vw;
     background-color: chocolate;
 }
 aside div{
@@ -53,9 +67,9 @@ aside div{
     background: rebeccapurple;
 }
 section{
-    position: absolute;
-    left: 20vw;
-    width: 80vw;
+    
+    
+    width: 90vw;
     padding: 1rem;
     background: indianred;
 }
