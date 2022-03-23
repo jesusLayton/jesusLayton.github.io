@@ -14,8 +14,23 @@ li{
     list-style: none;
 }
 header{
-    height: 50vh;
+    display: flex;
+    flex-direction: column;
     background-color: lightblue;
+}
+.header-sec{
+    background: rgb(32, 19, 102);
+}
+header section{
+    width: 100%;
+    background: rgb(101, 101, 223);
+    
+
+}
+header section:nth-child(2){
+    justify-content:center;
+    align-items: center;
+
 }
 main{
     
@@ -28,9 +43,8 @@ main{
 footer{
     height: 10vh;
 }
-figure, nav {
-    display: inline-block;
-}
+
+
 figure {
     margin: 1rem;
     
