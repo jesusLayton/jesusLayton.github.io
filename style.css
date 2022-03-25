@@ -9,6 +9,7 @@ html{
 }
 body{
     font-size: 1.6rem;
+    background-color: black;
 }
 li{
     list-style: none;
@@ -16,15 +17,21 @@ li{
 header{
     display: flex;
     flex-direction: column;
+   
     
     
 }
 
-.header-sec{
-    background: rgb(178, 169, 226);
+.header-sec1{
+    background: rgb(175, 168, 218);
     display: flex;
+    position: fixed;
+    top: 0;
+    border-radius: 1rem;
    
    
+
+}
 
 }
 .sec-span{
@@ -33,13 +40,15 @@ header{
 }
 header section{
     width: 100%;
-    background: rgb(137, 137, 223);
+    background: rgb(167, 166, 120);
     
 
 }
 header section:nth-child(2){
     justify-content:center;
     align-items: center;
+    border-radius: 1rem;
+    
 
 }
 main{
@@ -60,6 +69,7 @@ figure {
     justify-content: right;
     display:flex;
     justify-content: center;
+    border-radius: 1.5rem;
     
     
 }
@@ -83,18 +93,22 @@ aside, section {
 aside {
     width: 30vw;
     background-color: rgb(241, 202, 175);
+    border-radius: 1rem;
+    
 }
 aside div{
     height: 15vh;
     margin: 3vh;
     background: rgb(154, 126, 182);
+    border-radius: 1.5rem ;
 }
 .main-section{
     
     
     width: 90vw;
     padding: 1rem;
-    background: rgb(235, 159, 159);
+    background: rgb(255, 255, 255);
+    border-radius: 1rem;
 }
 .footer-sociales, .footer-info{
     display: inline-block;
@@ -102,6 +116,7 @@ aside div{
 }
 footer{
     background: rgb(194, 230, 141);
+    border-radius: 1rem;
 }
 .footer-info {
     position: absolute;
