@@ -350,8 +350,8 @@ img {
 }
 
 .hero-image img {
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     border-radius: 50%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -700,8 +700,8 @@ footer {
     }
     
     .hero-image img {
-        width: 180px;
-        height: 180px;
+        width: 160px;
+        height: 160px;
         border-width: 3px;
     }
     
@@ -821,6 +821,11 @@ footer {
     .project-tags span {
         font-size: 0.75rem;
         padding: 0.25rem 0.5rem;
+    }
+    
+    .hero-image img {
+        width: 140px;
+        height: 140px;
     }
 }
 
