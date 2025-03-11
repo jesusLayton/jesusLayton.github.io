@@ -178,6 +178,26 @@
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.nav-menu').classList.toggle('active');
         });
+
+        // Cerrar el menú al hacer clic en un enlace
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('.nav-menu').classList.remove('active');
+            });
+        });
+
+        // Mejoras para dispositivos móviles
+        document.addEventListener('DOMContentLoaded', function() {
+            // Ajustar altura en dispositivos móviles (soluciona problema con vh en móviles)
+            const setMobileHeight = () => {
+                const vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty('--vh', `${vh}px`);
+            };
+            
+            setMobileHeight();
+            window.addEventListener('resize', setMobileHeight);
+        });
     </script>
 </body>
 </html>
