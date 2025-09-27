@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CV Virtual de Jesús Layton - Ingeniero Electrónico & RPA Developer">
     <meta name="theme-color" content="#2563eb">
-    <title>Jesús Layton | CV Virtual - RPA Developer</title>
+    <title id="page-title" data-es="Jesús Layton | CV Virtual - RPA Developer" data-en="Jesús Layton | Virtual CV - RPA Developer">Jesús Layton | CV Virtual - RPA Developer</title>
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -85,6 +85,34 @@
 
         .nav-links a:hover {
             color: var(--primary-color);
+        }
+
+        .language-selector {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 2px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .lang-btn.active {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
         }
 
         .menu-toggle {
@@ -766,6 +794,10 @@
                 display: block;
             }
 
+            .language-selector {
+                order: -1;
+            }
+
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -845,15 +877,19 @@
     <header class="header">
         <nav class="nav">
             <div class="logo">JL.Dev</div>
-            <ul class="nav-links">
-                <li><a href="#about">Perfil</a></li>
-                <li><a href="#experience">Experiencia</a></li>
-                <li><a href="#skills">Competencias</a></li>
-                <li><a href="#education">Educación</a></li>
-                <li><a href="#hobbies">Intereses</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#contact">Contacto</a></li>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" data-es="Perfil" data-en="Profile">Perfil</a></li>
+                <li><a href="#experience" data-es="Experiencia" data-en="Experience">Experiencia</a></li>
+                <li><a href="#skills" data-es="Competencias" data-en="Skills">Competencias</a></li>
+                <li><a href="#education" data-es="Educación" data-en="Education">Educación</a></li>
+                <li><a href="#hobbies" data-es="Intereses" data-en="Interests">Intereses</a></li>
+                <li><a href="#projects" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
+                <li><a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
             </ul>
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="es">ES</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
             <button class="menu-toggle">
                 <i class="fas fa-bars"></i>
             </button>
@@ -864,16 +900,16 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Jesús Layton</h1>
-            <p class="subtitle">Ingeniero Electrónico & <span class="highlight">RPA Developer</span></p>
-            <p class="description">Especialista en automatización de procesos robóticos y desarrollo de soluciones tecnológicas escalables</p>
+            <p class="subtitle" data-es="Ingeniero Electrónico & RPA Developer" data-en="Electronic Engineer & RPA Developer">Ingeniero Electrónico & <span class="highlight">RPA Developer</span></p>
+            <p class="description" data-es="Especialista en automatización de procesos robóticos y desarrollo de soluciones tecnológicas escalables" data-en="Specialist in robotic process automation and scalable technological solutions development">Especialista en automatización de procesos robóticos y desarrollo de soluciones tecnológicas escalables</p>
             <div class="hero-buttons">
                 <a href="#experience" class="btn btn-primary">
                     <i class="fas fa-briefcase"></i>
-                    Ver Experiencia
+                    <span data-es="Ver Experiencia" data-en="View Experience">Ver Experiencia</span>
                 </a>
                 <a href="#contact" class="btn btn-secondary">
                     <i class="fas fa-envelope"></i>
-                    Contacto
+                    <span data-es="Contacto" data-en="Contact">Contacto</span>
                 </a>
             </div>
         </div>
@@ -882,14 +918,14 @@
     <!-- About Section -->
     <section id="about" class="section about">
         <div class="container">
-            <h2 class="section-title">Perfil Profesional</h2>
+            <h2 class="section-title" data-es="Perfil Profesional" data-en="Professional Profile">Perfil Profesional</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Ingeniero Electrónico con experiencia en <span class="highlight">desarrollo y automatización de procesos robóticos (RPA)</span>, especializado en Python, JavaScript, AutoIt, Selenium, Puppeteer y Node.js.</p>
+                    <p data-es="Ingeniero Electrónico con experiencia en desarrollo y automatización de procesos robóticos (RPA), especializado en Python, JavaScript, AutoIt, Selenium, Puppeteer y Node.js." data-en="Electronic Engineer with experience in robotic process automation (RPA) development and automation, specialized in Python, JavaScript, AutoIt, Selenium, Puppeteer and Node.js.">Ingeniero Electrónico con experiencia en <span class="highlight">desarrollo y automatización de procesos robóticos (RPA)</span>, especializado en Python, JavaScript, AutoIt, Selenium, Puppeteer y Node.js.</p>
                     
-                    <p>Cuento con trayectoria en levantamiento de procesos end-to-end, automatización mediante scripts, análisis y documentación de procesos empresariales, así como en el <span class="highlight">diseño e implementación de soluciones escalables</span> y mantenibles.</p>
+                    <p data-es="Cuento con trayectoria en levantamiento de procesos end-to-end, automatización mediante scripts, análisis y documentación de procesos empresariales, así como en el diseño e implementación de soluciones escalables y mantenibles." data-en="I have experience in end-to-end process mapping, script-based automation, business process analysis and documentation, as well as in designing and implementing scalable and maintainable solutions.">Cuento con trayectoria en levantamiento de procesos end-to-end, automatización mediante scripts, análisis y documentación de procesos empresariales, así como en el <span class="highlight">diseño e implementación de soluciones escalables</span> y mantenibles.</p>
                     
-                    <p>Me destaco por mi capacidad de resolución de problemas, toma de decisiones y enfoque en la mejora continua, contribuyendo a la <span class="highlight">eficiencia operativa</span> y la innovación en entornos corporativos.</p>
+                    <p data-es="Me destaco por mi capacidad de resolución de problemas, toma de decisiones y enfoque en la mejora continua, contribuyendo a la eficiencia operativa y la innovación en entornos corporativos." data-en="I excel in problem-solving, decision-making and continuous improvement focus, contributing to operational efficiency and innovation in corporate environments.">Me destaco por mi capacidad de resolución de problemas, toma de decisiones y enfoque en la mejora continua, contribuyendo a la <span class="highlight">eficiencia operativa</span> y la innovación en entornos corporativos.</p>
                 </div>
                 
                 <div class="soft-skills">
@@ -928,7 +964,7 @@
     <!-- Experience Section -->
     <section id="experience" class="section experience">
         <div class="container">
-            <h2 class="section-title">Experiencia Profesional</h2>
+            <h2 class="section-title" data-es="Experiencia Profesional" data-en="Professional Experience">Experiencia Profesional</h2>
             <div class="timeline">
                 <div class="timeline-item fade-in">
                     <div class="timeline-content">
@@ -996,7 +1032,7 @@
     <!-- Skills Section -->
     <section id="skills" class="section skills">
         <div class="container">
-            <h2 class="section-title">Competencias Técnicas</h2>
+            <h2 class="section-title" data-es="Competencias Técnicas" data-en="Technical Skills">Competencias Técnicas</h2>
             <div class="skills-container">
                 <div class="skill-category fade-in">
                     <h3><i class="fas fa-code"></i> Lenguajes de Programación</h3>
@@ -1044,7 +1080,7 @@
     <!-- Education Section -->
     <section id="education" class="section education">
         <div class="container">
-            <h2 class="section-title">Formación Académica y Certificaciones</h2>
+            <h2 class="section-title" data-es="Formación Académica y Certificaciones" data-en="Academic Background and Certifications">Formación Académica y Certificaciones</h2>
             <div class="education-content">
                 <div class="education-main">
                     <div class="education-item featured fade-in">
@@ -1119,16 +1155,16 @@
     <!-- Hobbies Section -->
     <section id="hobbies" class="section hobbies">
         <div class="container">
-            <h2 class="section-title">Intereses y Hobbies</h2>
+            <h2 class="section-title" data-es="Intereses y Hobbies" data-en="Interests and Hobbies">Intereses y Hobbies</h2>
             <div class="hobbies-content">
                 <div class="hobby-item featured fade-in">
                     <div class="hobby-icon">
                         <i class="fas fa-music"></i>
                     </div>
                     <div class="hobby-details">
-                        <h3>Música Carranguera</h3>
+                        <h3 data-es="Música Carranguera" data-en="Carranguera Music">Música Carranguera</h3>
                         <p class="hobby-period">2017 - 2018</p>
-                        <p class="hobby-description">
+                        <p class="hobby-description" data-es="Fundador y miembro del grupo de música carranguera 'La Pandilla Carranguera' junto con mis amigos. Como intérprete del tiple, desarrollamos un proyecto musical enfocado en la preservación y promoción de la música tradicional colombiana, específicamente el género carranguero, con presentaciones locales y contenido digital." data-en="Founder and member of the carranguera music group 'La Pandilla Carranguera' with my friends. As a tiple interpreter, we developed a musical project focused on preserving and promoting traditional Colombian music, specifically the carranguero genre, with local performances and digital content.">
                             Fundador y miembro del grupo de música carranguera <strong>"La Pandilla Carranguera"</strong> junto con mis amigos. 
                             Como <strong>intérprete del tiple</strong>, desarrollamos un proyecto musical enfocado en la preservación y promoción 
                             de la música tradicional colombiana, específicamente el género carranguero, con presentaciones locales y contenido digital.
@@ -1136,11 +1172,11 @@
                         <div class="hobby-links">
                             <a href="https://www.youtube.com/@lapandillacarranguera738" target="_blank" rel="noopener noreferrer" class="hobby-link">
                                 <i class="fab fa-youtube"></i>
-                                Ver Canal de YouTube
+                                <span data-es="Ver Canal de YouTube" data-en="View YouTube Channel">Ver Canal de YouTube</span>
                             </a>
                             <a href="https://www.youtube.com/watch?v=vXtTfs2AsDc" target="_blank" rel="noopener noreferrer" class="hobby-link">
                                 <i class="fas fa-play"></i>
-                                Ver Interpretación en Tiple
+                                <span data-es="Ver Interpretación en Tiple" data-en="Watch Tiple Performance">Ver Interpretación en Tiple</span>
                             </a>
                         </div>
                         <div class="hobby-tags">
@@ -1195,7 +1231,7 @@
     <!-- Projects Section -->
     <section id="projects" class="section projects">
         <div class="container">
-            <h2 class="section-title">Proyectos Destacados</h2>
+            <h2 class="section-title" data-es="Proyectos Destacados" data-en="Featured Projects">Proyectos Destacados</h2>
             <div class="projects-grid">
                 <div class="project-card fade-in">
                     <div class="project-image">
@@ -1264,7 +1300,7 @@
     <!-- Contact Section -->
     <section id="contact" class="section contact">
         <div class="container">
-            <h2 class="section-title">Contacto</h2>
+            <h2 class="section-title" data-es="Contacto" data-en="Contact">Contacto</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item fade-in">
@@ -1388,6 +1424,53 @@
                 el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
                 observer.observe(el);
             });
+        });
+
+        // Language switcher
+        function switchLanguage(lang) {
+            document.querySelectorAll('[data-es][data-en]').forEach(element => {
+                const text = element.getAttribute(`data-${lang}`);
+                if (text) {
+                    if (element.tagName === 'P' && element.classList.contains('subtitle')) {
+                        // Handle subtitle with highlight span
+                        if (lang === 'en') {
+                            element.innerHTML = 'Electronic Engineer & <span class="highlight">RPA Developer</span>';
+                        } else {
+                            element.innerHTML = 'Ingeniero Electrónico & <span class="highlight">RPA Developer</span>';
+                        }
+                    } else if (element.id === 'page-title') {
+                        // Update page title
+                        document.title = text;
+                    } else {
+                        element.textContent = text;
+                    }
+                }
+            });
+
+            // Update active language button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Store language preference
+            localStorage.setItem('preferred-language', lang);
+        }
+
+        // Language button event listeners
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.getAttribute('data-lang');
+                switchLanguage(lang);
+            });
+        });
+
+        // Load saved language preference or default to Spanish
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred-language') || 'es';
+            switchLanguage(savedLang);
         });
 
         // Mobile menu toggle
