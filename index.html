@@ -200,6 +200,29 @@
             transform: translateY(-2px);
         }
 
+        .btn-featured {
+            background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            font-weight: 600;
+            animation: pulse 2s infinite;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-featured:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+            }
+            50% {
+                box-shadow: 0 4px 25px rgba(245, 158, 11, 0.6);
+            }
+        }
+
         /* Sections */
         .section {
             padding: 80px 2rem;
@@ -971,6 +994,10 @@
             <p class="subtitle" data-es="Ingeniero Electrónico & RPA Developer" data-en="Electronic Engineer & RPA Developer">Ingeniero Electrónico & <span class="highlight">RPA Developer</span></p>
             <p class="description" data-es="Especialista en automatización de procesos robóticos y desarrollo de soluciones tecnológicas escalables" data-en="Specialist in robotic process automation and scalable technological solutions development">Especialista en automatización de procesos robóticos y desarrollo de soluciones tecnológicas escalables</p>
             <div class="hero-buttons">
+                <a href="#projects" class="btn btn-featured" id="btn-websites">
+                    <i class="fas fa-globe"></i>
+                    <span data-es="Ver Páginas Desarrolladas" data-en="View Developed Websites">Ver Páginas Desarrolladas</span>
+                </a>
                 <a href="#experience" class="btn btn-primary">
                     <i class="fas fa-briefcase"></i>
                     <span data-es="Ver Experiencia" data-en="View Experience">Ver Experiencia</span>
@@ -1620,28 +1647,48 @@
         }
 
         // Project Tabs functionality
+        function switchToTab(tabId) {
+            // Remove active class from all buttons and contents
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            
+            // Add active class to corresponding button and content
+            document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
+            document.getElementById(`tab-${tabId}`).classList.add('active');
+            
+            // Re-trigger fade-in animations for newly visible cards
+            document.querySelectorAll(`#tab-${tabId} .fade-in`).forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, 100);
+            });
+        }
+
         document.querySelectorAll('.tab-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const tabId = btn.getAttribute('data-tab');
-                
-                // Remove active class from all buttons and contents
-                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-                
-                // Add active class to clicked button and corresponding content
-                btn.classList.add('active');
-                document.getElementById(`tab-${tabId}`).classList.add('active');
-                
-                // Re-trigger fade-in animations for newly visible cards
-                document.querySelectorAll(`#tab-${tabId} .fade-in`).forEach(el => {
-                    el.style.opacity = '0';
-                    el.style.transform = 'translateY(30px)';
-                    setTimeout(() => {
-                        el.style.opacity = '1';
-                        el.style.transform = 'translateY(0)';
-                    }, 100);
-                });
+                switchToTab(tabId);
             });
+        });
+
+        // Hero button to Developed Websites
+        document.getElementById('btn-websites').addEventListener('click', (e) => {
+            e.preventDefault();
+            const projectsSection = document.getElementById('projects');
+            const headerHeight = document.querySelector('.header').offsetHeight;
+            
+            window.scrollTo({
+                top: projectsSection.offsetTop - headerHeight,
+                behavior: 'smooth'
+            });
+            
+            // Switch to websites tab after scrolling
+            setTimeout(() => {
+                switchToTab('websites');
+            }, 500);
         });
     </script>
 </body>
