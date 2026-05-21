@@ -201,14 +201,21 @@
         .hero-content { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
 
         .hero-avatar {
-            width: 96px; height: 96px;
-            background: rgba(255,255,255,0.18);
-            border: 3px solid rgba(255,255,255,0.45);
+            width: 130px; height: 130px;
+            border: 4px solid rgba(255,255,255,0.55);
             border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
             margin: 0 auto 1.5rem;
-            font-size: 2.2rem; font-weight: 700; color: white;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.25), 0 0 0 6px rgba(255,255,255,0.12);
             animation: fadeInUp 0.8s ease-out both;
+            flex-shrink: 0;
+        }
+
+        .hero-avatar img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
         }
 
         .hero h1 { font-size: 3.5rem; font-weight: 700; margin-bottom: 1rem; animation: fadeInUp 0.8s ease-out 0.1s both; }
@@ -771,7 +778,9 @@
     <section class="hero">
         <canvas id="hero-particles"></canvas>
         <div class="hero-content">
-            <div class="hero-avatar">JL</div>
+            <div class="hero-avatar">
+                <img src="me.jpg" alt="Jesús Layton">
+            </div>
             <h1>Jesús Layton</h1>
             <p class="subtitle">
                 <span id="tw-prefix">Ingeniero Electrónico &amp; </span><span id="tw-role"></span><span class="typewriter-cursor"></span>
@@ -795,7 +804,7 @@
             </div>
             <div class="hero-stats">
                 <div class="stat-item">
-                    <span class="stat-number" data-target="3">3+</span>
+                    <span class="stat-number" data-target="5">5+</span>
                     <span class="stat-label" data-es="Años en RPA" data-en="Years in RPA">Años en RPA</span>
                 </div>
                 <div class="stat-item">
@@ -856,10 +865,10 @@
                 <div class="timeline-track" id="timeline-track"></div>
                 <div class="timeline-item fade-in">
                     <div class="timeline-content">
-                        <div class="timeline-date">Nov 2021 - Presente</div>
+                        <div class="timeline-date">Nov 2021 - Presente · ~5 años</div>
                         <h3>Ingeniero RPA</h3>
                         <div class="company">Desarrollo de Automatizaciones</div>
-                        <p>Desarrollo de automatizaciones con la implementación de la tecnología RPA, bases de datos, JavaScript, soporte y mantenimiento de sistemas automatizados.</p>
+                        <p>Desarrollo de automatizaciones con la implementación de la tecnología RPA, bases de datos, JavaScript, soporte y mantenimiento de sistemas automatizados. Casi 5 años liderando soluciones de automatización de procesos de negocio end-to-end.</p>
                     </div>
                     <div class="timeline-dot"></div>
                 </div>
