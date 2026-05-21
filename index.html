@@ -1247,20 +1247,18 @@
         let W, H, particles = [];
 
         function resize() {
-            W = canvas.width = canvas.offsetWidth;
+            W = canvas.width  = canvas.offsetWidth;
             H = canvas.height = canvas.offsetHeight;
         }
 
-        function Particle() {
-            this.reset();
-        }
+        function Particle() { this.reset(); }
 
         Particle.prototype.reset = function () {
-            this.x = Math.random() * W;
-            this.y = Math.random() * H;
-            this.vx = (Math.random() - 0.5) * 0.45;
-            this.vy = (Math.random() - 0.5) * 0.45;
-            this.r = Math.random() * 1.8 + 0.6;
+            this.x     = Math.random() * W;
+            this.y     = Math.random() * H;
+            this.vx    = (Math.random() - 0.5) * 0.45;
+            this.vy    = (Math.random() - 0.5) * 0.45;
+            this.r     = Math.random() * 1.8 + 0.6;
             this.alpha = Math.random() * 0.5 + 0.2;
         };
 
@@ -1278,7 +1276,6 @@
                 p.y += p.vy;
                 if (p.x < 0 || p.x > W) p.vx *= -1;
                 if (p.y < 0 || p.y > H) p.vy *= -1;
-
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
                 ctx.fillStyle = `rgba(255,255,255,${p.alpha})`;
@@ -1288,8 +1285,8 @@
             const maxDist = 130;
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {
-                    const dx = particles[i].x - particles[j].x;
-                    const dy = particles[i].y - particles[j].y;
+                    const dx   = particles[i].x - particles[j].x;
+                    const dy   = particles[i].y - particles[j].y;
                     const dist = Math.sqrt(dx * dx + dy * dy);
                     if (dist < maxDist) {
                         ctx.beginPath();
