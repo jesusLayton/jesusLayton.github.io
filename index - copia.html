@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV Virtual de Jesús Layton - Ingeniero Electrónico & RPA Developer">
+    <meta name="theme-color" content="#2563eb">
+    <title id="page-title" data-es="Jesús Layton | CV Virtual - RPA Developer" data-en="Jesús Layton | Virtual CV - RPA Developer">Jesús Layton | CV Virtual - RPA Developer</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary-color: #64748b;
+            --accent-color: #06b6d4;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-tertiary: #f1f5f9;
+            --border-color: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --gradient: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+        }
+
+        /* Header & Navigation */
+        .header {
+            background: var(--bg-primary);
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .language-selector {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 2px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .lang-btn.active {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient);
+            color: white;
+            padding: 140px 2rem 80px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-secondary);
+            transform: translateY(-2px);
+        }
+
+        .btn-featured {
+            background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            font-weight: 600;
+            animation: pulse 2s infinite;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-featured:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+            }
+            50% {
+                box-shadow: 0 4px 25px rgba(245, 158, 11, 0.6);
+            }
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--bg-primary);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .highlight {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .soft-skills {
+            background: var(--bg-tertiary);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        .soft-skills h3 {
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+
+        .skill-item i {
+            color: var(--primary-color);
+        }
+
+        /* Experience Section */
+        .experience {
+            background: var(--bg-secondary);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            width: 50%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 2rem;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 2rem;
+        }
+
+        .timeline-content {
+            background: var(--bg-primary);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -20px;
+            border-left-color: var(--bg-primary);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -20px;
+            border-right-color: var(--bg-primary);
+        }
+
+        .timeline-date {
+            background: var(--gradient);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .company {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 16px;
+            background: var(--primary-color);
+            border: 4px solid var(--bg-primary);
+            border-radius: 50%;
+            top: 20px;
+        }
+
+        /* Skills Section */
+        .skills {
+            background: var(--bg-primary);
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-category h3 {
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .skill-list i {
+            color: var(--primary-color);
+            width: 20px;
+        }
+
+        /* Education Section */
+        .education {
+            background: var(--bg-secondary);
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .education-card {
+            background: var(--bg-primary);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .education-icon {
+            background: var(--gradient);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .education-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .institution {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .certifications {
+            margin-top: 3rem;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .cert-item {
+            background: var(--bg-primary);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+            font-size: 0.9rem;
+        }
+
+        /* Hobbies Section */
+        .hobbies {
+            background: var(--bg-tertiary);
+        }
+
+        .hobbies-content {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .hobby-item {
+            background: var(--bg-primary);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .hobby-item:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .hobby-item.featured {
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.1);
+        }
+
+        .hobby-icon {
+            background: var(--gradient);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .hobby-details h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .hobby-period {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .hobby-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .hobby-links {
+            margin-bottom: 1rem;
+        }
+
+        .hobby-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #ff0000;
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .hobby-link:hover {
+            background: #cc0000;
+            transform: translateY(-2px);
+        }
+
+        .hobby-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .hobby-tags .tag {
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Projects Section */
+        .projects {
+            background: var(--bg-primary);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .project-image {
+            background: var(--gradient);
+            color: white;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-content h3 {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Project Tabs */
+        .project-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            color: var(--text-secondary);
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .tab-btn:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .tab-btn.active {
+            background: var(--gradient);
+            border-color: var(--primary-color);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .tab-btn i {
+            font-size: 1.1rem;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tab-btn {
+                padding: 0.75rem 1.25rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--bg-secondary);
+        }
+
+        .contact-content {
+            text-align: center;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-item {
+            background: var(--bg-primary);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-item i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            background: var(--primary-dark);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--bg-primary);
+                flex-direction: column;
+                padding: 1rem 0;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .language-selector {
+                order: -1;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                padding-left: 3rem !important;
+                padding-right: 0 !important;
+            }
+
+            .timeline-content::before {
+                left: -20px !important;
+                border-right-color: var(--bg-primary) !important;
+                border-left-color: transparent !important;
+            }
+
+            .timeline-dot {
+                left: 20px !important;
+                transform: translateX(-50%);
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 200px;
+                justify-content: center;
+            }
+
+            .hobby-item {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hobby-icon {
+                align-self: flex-start;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section {
+                padding: 60px 1rem;
+            }
+
+            .hero {
+                padding: 120px 1rem 60px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .timeline-item {
+                padding-left: 2.5rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">JL.Dev</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" data-es="Perfil" data-en="Profile">Perfil</a></li>
+                <li><a href="#experience" data-es="Experiencia" data-en="Experience">Experiencia</a></li>
+                <li><a href="#skills" data-es="Competencias" data-en="Skills">Competencias</a></li>
+                <li><a href="#education" data-es="Educación" data-en="Education">Educación</a></li>
+                <li><a href="#hobbies" data-es="Intereses" data-en="Interests">Intereses</a></li>
+                <li><a href="#projects" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
+                <li><a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
+            </ul>
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="es">ES</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Jesús Layton</h1>
+            <p class="subtitle" data-es="Ingeniero Electrónico & RPA Developer" data-en="Electronic Engineer & RPA Developer">Ingeniero Electrónico & <span class="highlight">RPA Developer</span></p>
+            <p class="description" data-es="Especialista en automatización de procesos robóticos y desarrollo de soluciones tecnológicas escalables" data-en="Specialist in robotic process automation and scalable technological solutions development">Especialista en automatización de procesos robóticos y desarrollo de soluciones tecnológicas escalables</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-featured" id="btn-websites">
+                    <i class="fas fa-globe"></i>
+                    <span data-es="Ver Páginas Desarrolladas" data-en="View Developed Websites">Ver Páginas Desarrolladas</span>
+                </a>
+                <a href="#experience" class="btn btn-primary">
+                    <i class="fas fa-briefcase"></i>
+                    <span data-es="Ver Experiencia" data-en="View Experience">Ver Experiencia</span>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i>
+                    <span data-es="Contacto" data-en="Contact">Contacto</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title" data-es="Perfil Profesional" data-en="Professional Profile">Perfil Profesional</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-es="Ingeniero Electrónico con experiencia en desarrollo y automatización de procesos robóticos (RPA), especializado en Python, JavaScript, AutoIt, Selenium, Puppeteer y Node.js." data-en="Electronic Engineer with experience in robotic process automation (RPA) development and automation, specialized in Python, JavaScript, AutoIt, Selenium, Puppeteer and Node.js.">Ingeniero Electrónico con experiencia en <span class="highlight">desarrollo y automatización de procesos robóticos (RPA)</span>, especializado en Python, JavaScript, AutoIt, Selenium, Puppeteer y Node.js.</p>
+                    
+                    <p data-es="Cuento con trayectoria en levantamiento de procesos end-to-end, automatización mediante scripts, análisis y documentación de procesos empresariales, así como en el diseño e implementación de soluciones escalables y mantenibles." data-en="I have experience in end-to-end process mapping, script-based automation, business process analysis and documentation, as well as in designing and implementing scalable and maintainable solutions.">Cuento con trayectoria en levantamiento de procesos end-to-end, automatización mediante scripts, análisis y documentación de procesos empresariales, así como en el <span class="highlight">diseño e implementación de soluciones escalables</span> y mantenibles.</p>
+                    
+                    <p data-es="Me destaco por mi capacidad de resolución de problemas, toma de decisiones y enfoque en la mejora continua, contribuyendo a la eficiencia operativa y la innovación en entornos corporativos." data-en="I excel in problem-solving, decision-making and continuous improvement focus, contributing to operational efficiency and innovation in corporate environments.">Me destaco por mi capacidad de resolución de problemas, toma de decisiones y enfoque en la mejora continua, contribuyendo a la <span class="highlight">eficiencia operativa</span> y la innovación en entornos corporativos.</p>
+                </div>
+                
+                <div class="soft-skills">
+                    <h3>Habilidades Blandas</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class="fas fa-users"></i>
+                            <span>Liderazgo</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-handshake"></i>
+                            <span>Trabajo en equipo</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Trabajo bajo presión</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-headset"></i>
+                            <span>Atención al cliente</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-target"></i>
+                            <span>Orientación a resultados</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Resolución de problemas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title" data-es="Experiencia Profesional" data-en="Professional Experience">Experiencia Profesional</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Nov 2021 - Presente</div>
+                        <h3>Ingeniero RPA</h3>
+                        <div class="company">Desarrollo de Automatizaciones</div>
+                        <p>Desarrollo de automatizaciones con la implementación de la tecnología RPA, bases de datos, JavaScript, soporte y mantenimiento de sistemas automatizados.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Abr 2021 - Nov 2021</div>
+                        <h3>Consultor Corporativo CLARO</h3>
+                        <div class="company">OUTSOURCING</div>
+                        <p>Soporte técnico de primer nivel, servicios postventa, atención al cliente corporativo.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Feb 2020 - Abr 2021</div>
+                        <h3>Técnico de Campo - Zonas Digitales</h3>
+                        <div class="company">MINTIC - FASOF (INRED)</div>
+                        <p>Encargado del departamento de Antioquia. Instalaciones, desinstalaciones, mantenimientos preventivos y correctivos, estudios de campo.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Sep 2018 - Dic 2019</div>
+                        <h3>Coordinador de Apoyo - KVD 3</h3>
+                        <div class="company">MINTIC - INRED</div>
+                        <p>Kioscos Vive Digital versión 3. <strong>Mejor Empleado del Mes (Oct 2018 y Ago 2019)</strong>. Mantenimientos preventivos, correctivos, instalaciones y desinstalaciones.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Abr 2018 - Jul 2018</div>
+                        <h3>Delegado Municipal DANE</h3>
+                        <div class="company">DANE</div>
+                        <p>Censo Nacional de Población y Vivienda 2018 en el municipio del Guacamayo, Santander.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Sep 2017 - Nov 2017</div>
+                        <h3>Líder Regional - Computadores para Educar</h3>
+                        <div class="company">MINTIC - Asoandes</div>
+                        <p>Liderazgo regional del proyecto en el departamento de Santander.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title" data-es="Competencias Técnicas" data-en="Technical Skills">Competencias Técnicas</h2>
+            <div class="skills-container">
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-code"></i> Lenguajes de Programación</h3>
+                    <ul class="skill-list">
+                        <li><i class="fab fa-python"></i> Python</li>
+                        <li><i class="fab fa-js-square"></i> JavaScript</li>
+                        <li><i class="fas fa-database"></i> SQL</li>
+                        <li><i class="fab fa-html5"></i> HTML5 / CSS3</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-robot"></i> RPA & Automatización</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-robot"></i> RPA (Robotic Process Automation)</li>
+                        <li><i class="fas fa-code"></i> Selenium</li>
+                        <li><i class="fas fa-cogs"></i> Puppeteer</li>
+                        <li><i class="fas fa-terminal"></i> AutoIt</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-tools"></i> Tecnologías & Herramientas</h3>
+                    <ul class="skill-list">
+                        <li><i class="fab fa-node-js"></i> Node.js</li>
+                        <li><i class="fab fa-linux"></i> Linux</li>
+                        <li><i class="fas fa-code"></i> Visual Studio Code</li>
+                        <li><i class="fab fa-github"></i> GitHub</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-plus-circle"></i> Otras Competencias</h3>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-file-excel"></i> Herramientas Office</li>
+                        <li><i class="fas fa-microchip"></i> Diseño electrónico</li>
+                        <li><i class="fas fa-drafting-compass"></i> AutoCAD 2D</li>
+                        <li><i class="fas fa-network-wired"></i> Redes de computadores</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education">
+        <div class="container">
+            <h2 class="section-title" data-es="Formación Académica y Certificaciones" data-en="Academic Background and Certifications">Formación Académica y Certificaciones</h2>
+            <div class="education-content">
+                <div class="education-main">
+                    <div class="education-item featured fade-in">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-details">
+                            <h3>Ingeniero Electrónico</h3>
+                            <p class="institution">Universidad Industrial de Santander (UIS)</p>
+                            <p class="date">Graduado: Marzo 2017</p>
+                        </div>
+                    </div>
+                    
+                    <div class="education-item current fade-in">
+                        <div class="education-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="education-details">
+                            <h3>Especialización en Ciberseguridad</h3>
+                            <p class="institution">ITM Medellín</p>
+                            <p class="date">Inicio: Agosto 2025 - En curso</p>
+                            <p class="mode">Modalidad presencial</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certifications fade-in">
+                    <h3>Certificaciones Profesionales y Diplomados</h3>
+                    <div class="cert-grid">
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Diplomado Fundamentos de Programación - Misión TIC 2022</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Diplomado Desarrollo de Software - Misión TIC 2022</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Diplomado Desarrollo de Aplicaciones Web - Universidad del Bosque</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Curso Avanzado de Python (16h) - PLATZI</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Certificación Trabajo Seguro en Alturas Nivel Avanzado (20h) - ASCENSO</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>AutoCAD 2D con enfoque eléctrico (40h) - SENA</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Administración de Redes de Computadores (40h) - SENA</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>TICs: Tecnología de la Información y Comunicación (60h) - SENA</span>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Análisis de Datos con Excel Avanzado - SENA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="section hobbies">
+        <div class="container">
+            <h2 class="section-title" data-es="Intereses y Hobbies" data-en="Interests and Hobbies">Intereses y Hobbies</h2>
+            <div class="hobbies-content">
+                <div class="hobby-item featured fade-in">
+                    <div class="hobby-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="hobby-details">
+                        <h3 data-es="Música Carranguera" data-en="Carranguera Music">Música Carranguera</h3>
+                        <p class="hobby-period">2017 - 2018</p>
+                        <p class="hobby-description" data-es="Fundador y miembro del grupo de música carranguera 'La Pandilla Carranguera' junto con mis amigos. Como intérprete del tiple, desarrollamos un proyecto musical enfocado en la preservación y promoción de la música tradicional colombiana, específicamente el género carranguero, con presentaciones locales y contenido digital." data-en="Founder and member of the carranguera music group 'La Pandilla Carranguera' with my friends. As a tiple interpreter, we developed a musical project focused on preserving and promoting traditional Colombian music, specifically the carranguero genre, with local performances and digital content.">
+                            Fundador y miembro del grupo de música carranguera <strong>"La Pandilla Carranguera"</strong> junto con mis amigos. 
+                            Como <strong>intérprete del tiple</strong>, desarrollamos un proyecto musical enfocado en la preservación y promoción 
+                            de la música tradicional colombiana, específicamente el género carranguero, con presentaciones locales y contenido digital.
+                        </p>
+                        <div class="hobby-links">
+                            <a href="https://www.youtube.com/@lapandillacarranguera738" target="_blank" rel="noopener noreferrer" class="hobby-link">
+                                <i class="fab fa-youtube"></i>
+                                <span data-es="Ver Canal de YouTube" data-en="View YouTube Channel">Ver Canal de YouTube</span>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=vXtTfs2AsDc" target="_blank" rel="noopener noreferrer" class="hobby-link">
+                                <i class="fas fa-play"></i>
+                                <span data-es="Ver Interpretación en Tiple" data-en="Watch Tiple Performance">Ver Interpretación en Tiple</span>
+                            </a>
+                        </div>
+                        <div class="hobby-tags">
+                            <span class="tag">Tiple</span>
+                            <span class="tag">Música Tradicional</span>
+                            <span class="tag">Cultura Colombiana</span>
+                            <span class="tag">Trabajo en Equipo</span>
+                            <span class="tag">Creatividad</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hobby-item fade-in">
+                    <div class="hobby-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="hobby-details">
+                        <h3>Desarrollo Personal de Proyectos</h3>
+                        <p class="hobby-description">
+                            Desarrollo de aplicaciones web y herramientas de automatización como proyectos personales. 
+                            Disfruto experimentando con nuevas tecnologías y creando soluciones innovadoras en mi tiempo libre.
+                        </p>
+                        <div class="hobby-tags">
+                            <span class="tag">Programación</span>
+                            <span class="tag">Innovación</span>
+                            <span class="tag">Aprendizaje Continuo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hobby-item fade-in">
+                    <div class="hobby-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="hobby-details">
+                        <h3>Automatización y RPA</h3>
+                        <p class="hobby-description">
+                            Exploración y desarrollo de soluciones de automatización de procesos como pasión personal. 
+                            Me fascina encontrar formas de optimizar tareas repetitivas y mejorar la eficiencia através de la tecnología.
+                        </p>
+                        <div class="hobby-tags">
+                            <span class="tag">Automatización</span>
+                            <span class="tag">Eficiencia</span>
+                            <span class="tag">Proceso Mining</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title" data-es="Proyectos Destacados" data-en="Featured Projects">Proyectos Destacados</h2>
+            
+            <!-- Tabs Navigation -->
+            <div class="project-tabs">
+                <button class="tab-btn active" data-tab="personal" data-es="Proyectos Personales" data-en="Personal Projects">
+                    <i class="fas fa-code"></i>
+                    Proyectos Personales
+                </button>
+                <button class="tab-btn" data-tab="websites" data-es="Páginas Desarrolladas" data-en="Developed Websites">
+                    <i class="fas fa-globe"></i>
+                    Páginas Desarrolladas
+                </button>
+            </div>
+
+            <!-- Tab Content: Proyectos Personales -->
+            <div class="tab-content active" id="tab-personal">
+                <div class="projects-grid">
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <i class="fas fa-clock fa-3x"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Reloj Digital Interactivo</h3>
+                            <p>Aplicación web de reloj digital con diseño moderno e interfaz intuitiva. Implementa funcionalidades avanzadas de temporización y visualización de datos en tiempo real.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">DOM</span>
+                            </div>
+                            <a href="https://jesuslayton.github.io/reloj/" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Ver Proyecto
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <i class="fas fa-stopwatch fa-3x"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Cronómetro Web Funcional</h3>
+                            <p>Aplicación de cronómetro web con funcionalidades de pausa y reinicio. Desarrollado con algoritmos de precisión temporal y gestión de estados optimizada.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">API Timer</span>
+                            </div>
+                            <a href="https://jesuslayton.github.io/cronometro/" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Ver Proyecto
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <i class="fas fa-robot fa-3x"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Soluciones de Automatización RPA</h3>
+                            <p>Desarrollo e implementación de robots de procesos automatizados (RPA) para optimización de flujos de trabajo empresariales. Incluye análisis de procesos, documentación técnica y mantenimiento de bots.</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Selenium</span>
+                                <span class="tag">Puppeteer</span>
+                                <span class="tag">AutoIt</span>
+                                <span class="tag">Process Mining</span>
+                            </div>
+                            <a href="https://github.com/jesusLayton" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Ver Portfolio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Páginas Desarrolladas -->
+            <div class="tab-content" id="tab-websites">
+                <div class="projects-grid">
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <i class="fas fa-truck fa-3x"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Distribuidora Sinaí</h3>
+                            <p>Página web para distribuidora con catálogo de productos, información de contacto y diseño moderno. Implementación de interfaz responsiva y optimizada para conversiones.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Responsive</span>
+                            </div>
+                            <a href="https://sinai2.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Ver Proyecto
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <i class="fas fa-snowflake fa-3x"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3>Tienda de Granizados</h3>
+                            <p>Sitio web para tienda de granizados con menú interactivo, galería de productos y sistema de pedidos. Diseño atractivo y colorido orientado al público objetivo.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">UI/UX</span>
+                            </div>
+                            <a href="https://granizados-one.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Ver Proyecto
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title" data-es="Contacto" data-en="Contact">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item fade-in">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>Disponible bajo solicitud</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item fade-in">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p>Disponible bajo solicitud</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item fade-in">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Ubicación</h3>
+                            <p>Colombia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links fade-in">
+                    <h3>Conecta conmigo</h3>
+                    <div class="social-buttons">
+                        <a href="https://github.com/jesusLayton" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/jesus-laiton-2a248b207" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Jesús Layton. Todos los derechos reservados.</p>
+                <p>Ingeniero Electrónico & RPA Developer</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            const headerHeight = document.querySelector('.header').offsetHeight;
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - headerHeight - 100;
+                const sectionHeight = section.offsetHeight;
+                
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    currentSection = section.id;
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Fade in animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+
+        // Language switcher
+        function switchLanguage(lang) {
+            document.querySelectorAll('[data-es][data-en]').forEach(element => {
+                const text = element.getAttribute(`data-${lang}`);
+                if (text) {
+                    if (element.tagName === 'P' && element.classList.contains('subtitle')) {
+                        // Handle subtitle with highlight span
+                        if (lang === 'en') {
+                            element.innerHTML = 'Electronic Engineer & <span class="highlight">RPA Developer</span>';
+                        } else {
+                            element.innerHTML = 'Ingeniero Electrónico & <span class="highlight">RPA Developer</span>';
+                        }
+                    } else if (element.id === 'page-title') {
+                        // Update page title
+                        document.title = text;
+                    } else {
+                        element.textContent = text;
+                    }
+                }
+            });
+
+            // Update active language button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Store language preference
+            localStorage.setItem('preferred-language', lang);
+        }
+
+        // Language button event listeners
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const lang = btn.getAttribute('data-lang');
+                switchLanguage(lang);
+            });
+        });
+
+        // Load saved language preference or default to Spanish
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred-language') || 'es';
+            switchLanguage(savedLang);
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('active');
+                });
+            });
+        }
+
+        // Project Tabs functionality
+        function switchToTab(tabId) {
+            // Remove active class from all buttons and contents
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            
+            // Add active class to corresponding button and content
+            document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
+            document.getElementById(`tab-${tabId}`).classList.add('active');
+            
+            // Re-trigger fade-in animations for newly visible cards
+            document.querySelectorAll(`#tab-${tabId} .fade-in`).forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, 100);
+            });
+        }
+
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.getAttribute('data-tab');
+                switchToTab(tabId);
+            });
+        });
+
+        // Hero button to Developed Websites
+        document.getElementById('btn-websites').addEventListener('click', (e) => {
+            e.preventDefault();
+            const projectsSection = document.getElementById('projects');
+            const headerHeight = document.querySelector('.header').offsetHeight;
+            
+            window.scrollTo({
+                top: projectsSection.offsetTop - headerHeight,
+                behavior: 'smooth'
+            });
+            
+            // Switch to websites tab after scrolling
+            setTimeout(() => {
+                switchToTab('websites');
+            }, 500);
+        });
+    </script>
+</body>
+</html>
